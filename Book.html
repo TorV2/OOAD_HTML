@@ -20,14 +20,12 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><b>Book to Go
 
 </h3>
-</div>
-<div class="w3-bar-block">
-  <a href="main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือ</a>
-  <a href="ShoppingCard.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ตะกร้าหนังสือ</a>
-  <a href="Order.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือที่สั่งซื้อ</a>
-  <a href="Delivery.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">สถานะการจัดส่งสินค้า</a>
+  </div>
+  <div class="w3-bar-block">
+    <a href="Book.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">คลังหนังสือ</a>
+  <a href="BestSellBook.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">อันดับหนังสือขายดีประจำวันล่าสุด</a>
 
-</div>
+  </div>
 </nav>
 
 
@@ -43,26 +41,35 @@ body {font-size:16px;}
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
   
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-      <h2 class="w3-jumbo"><b>รายการหนังสือ</b></h2>
+  <center><div class="w3-container" style="margin-top:80px" id="showcase">
+      <h2 class="w3-jumbo"><b>คลังหนังสือ</b></h2></center>
 
   </div>
+  <center>
+  <input type="search" placeholder="ค้นหารายชื่อหนังสือ">
+		<button>Search</button>
   
-  <div>
+        <button onClick = "window.open('addBook.html')"><b>ADD NEW+</b></button>
+
+  <div class="w3-row-padding">
+  <br><br>  
+<div>
     <table border="1" bordercolor="black" width="60%" height="20%">
         
         <tr>
-                        <th> หมายเลขคำสั่งซื้อ</th><th> วันที่สั่งซื้อ</th><th> ราคา </th><th> สถานะการจัดส่งสินค้า </th>
-        
-                   </tr> 
+            <th> ชื่อหนังสือ </th><th> ประเภท </th><th> ราคา </th><th> จำนวน </th>
+        </tr> 
         <tr>
-            <td> 0109256411</td><td> 14/11/2564  </td><td> 199 </td><td> กำลังจัดส่งสินค้า</td>
+            <td>รวมโจทย์คณิตเก่งคิดแก้ปัญหา</td><td> การศึกษา  </td><td> 199 </td><td> 30</td>
+            <td> <button onClick = "window.open('addBook.html')"><b>แก้ไข</b></button></td><td> <button onClick = "window.open('check.html')"><b>ลบ</b></button></td>
         </tr>
-       
+        <tr>
+            <td>"คณิตศาสตร์" ยิ่งชอบ ยิ่งเก่ง ยิ่งเรียน ยิ่งสนุก</td><td> การศึกษา  </td><td> 165  </td><td> 30 </td>
+            <td> <button onClick = "window.open('addBook.html')"><b>แก้ไข</b></button></td><td> <button onClick = "window.open('addBook.html')"><b>ลบ</b></button></td>
+        </tr>
         </table>
-        <h5 align = 'right'><button onClick = "window.open('CancelOrder.html')"><b>ยกเลิกการสั่งซื้อ</b></button></h5> 
     </div>
-
+    </center>
   
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
@@ -71,16 +78,6 @@ body {font-size:16px;}
       <p id="caption"></p>
     </div>
   </div>
-
-  
-  
-    
-    
- 
-
-  
-
-
 </div>
 
 

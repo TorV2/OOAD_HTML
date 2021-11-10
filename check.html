@@ -10,16 +10,31 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;}
+.button2 {background-color: #e02323;}
 </style>
 <body>
 
-
+<!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><b>Book to Go
 
 </h3>
+ </div>
 </div>
 <div class="w3-bar-block">
   <a href="main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายการหนังสือ</a>
@@ -44,25 +59,17 @@ body {font-size:16px;}
 
   
   <div class="w3-container" style="margin-top:80px" id="showcase">
-      <h2 class="w3-jumbo"><b>รายการหนังสือ</b></h2>
+      <h2 class="w3-jumbo"><b></b></h2>
 
   </div>
-  
-  <div>
-    <table border="1" bordercolor="black" width="60%" height="20%">
-        
-        <tr>
-                        <th> หมายเลขคำสั่งซื้อ</th><th> วันที่สั่งซื้อ</th><th> ราคา </th><th> สถานะการจัดส่งสินค้า </th>
-        
-                   </tr> 
-        <tr>
-            <td> 0109256411</td><td> 14/11/2564  </td><td> 199 </td><td> กำลังจัดส่งสินค้า</td>
-        </tr>
-       
-        </table>
-        <h5 align = 'right'><button onClick = "window.open('CancelOrder.html')"><b>ยกเลิกการสั่งซื้อ</b></button></h5> 
-    </div>
-
+  <div class="w3-row-padding">
+    <div class="w3-half">
+    <center><img src="check.png" style="width:50%" onclick="onClick(this)" alt="">
+    <div class="w3-container" style="margin-top:50px" id="showcase">
+        <h2 class="w3"><b>ยกเลิกการสั่งซื้อสำเร็จ</b></h2></center>
+</div>
+<div>
+    <br><br>
   
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
@@ -71,19 +78,7 @@ body {font-size:16px;}
       <p id="caption"></p>
     </div>
   </div>
-
-  
-  
-    
-    
- 
-
-  
-
-
 </div>
-
-
 
 <script>
 
